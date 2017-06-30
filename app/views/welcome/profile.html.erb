@@ -1,1 +1,5 @@
-<h1> Profile Page</h1>
+<% if user_signed_in? %>
+            <h1>You are currently signed in</h1>
+            <% else %>
+              <h1>Login Required</h1>
+            <% end %>
