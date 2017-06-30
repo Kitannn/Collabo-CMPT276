@@ -4,4 +4,7 @@ class WelcomeController < ApplicationController
 	
 	def profile
 	end
+	
+	def allusers
+	end
 end

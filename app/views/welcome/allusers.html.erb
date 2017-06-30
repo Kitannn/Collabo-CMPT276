@@ -1,0 +1,15 @@
+<body>
+    <% i = 0 %>
+    <% x=User.all %>
+    <% while (i <x.size) do%>
+
+            
+        <tr>
+        <td>Username: <%= x[i].username %></td>
+        <td>Email: <%= x[i].email %></td>
+        </tr>
+        <p></p>
+        <%i = i+1%>
+    <% end %>
+
+</body>

@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
-            <h1>You are currently signed in</h1>
+            <h1></h1>
+            <p>Username: <%= current_user.username %></p>
+            <p>Email: <%= current_user.email %></p>
+            <p>User ID Number: <%= current_user.id %></p>
+            <p>User Created at: <%= current_user.created_at %></p>
             <% else %>
               <h1>Login Required</h1>
             <% end %>

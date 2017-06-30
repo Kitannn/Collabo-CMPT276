@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'welcome#index'
   get 'welcome/profile', to: 'welcome#profile'
-
+  get 'welcome/allusers', to: 'welcome#allusers'
   root 'welcome#index'
 end

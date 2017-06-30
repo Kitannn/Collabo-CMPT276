@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1>Postings</h1>
 
 <table>
   <thead>
@@ -15,11 +15,15 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.description %></td>
-        <td><%= article.user %></td>
+        <td>Created by: <%= article.user.username %></td>
+      </tr>
+        
+        
         <td><%= link_to 'Show', article %></td>
+        <% if (current_user == article.user) %>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>
